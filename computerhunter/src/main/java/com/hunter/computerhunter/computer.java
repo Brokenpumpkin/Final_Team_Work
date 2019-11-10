@@ -1,20 +1,71 @@
 package com.hunter.computerhunter;
 
-public class computer {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class computer{
+    @Id
     private String model;
+    //@Column(name = "brand",nullable = false)
     private String brand;
     private int price;
     private int cpuWeight;
+    private String cpuName;
     private int displayCardWeight;
+    private String displayCardName;
     private int hardDiskWeight;
+    private String hardDiskName;
     private int memoryWeight;
+    private String memoryName;
     private String characterOne;
     private String characterTwo;
     private String characterThree;
     private String buyUrl1;
     private String buyUrl2;
     private String buyUrl3;
-    private String explain;
+    private String computerExplain;
+
+    public String getCpuName() {
+        return cpuName;
+    }
+
+    public void setCpuName(String cpuName) {
+        this.cpuName = cpuName;
+    }
+
+    public String getDisplayCardName() {
+        return displayCardName;
+    }
+
+    public void setDisplayCardName(String displayCardName) {
+        this.displayCardName = displayCardName;
+    }
+
+    public String getHardDiskName() {
+        return hardDiskName;
+    }
+
+    public void setHardDiskName(String hardDiskName) {
+        this.hardDiskName = hardDiskName;
+    }
+
+    public String getMemoryName() {
+        return memoryName;
+    }
+
+    public void setMemoryName(String memoryName) {
+        this.memoryName = memoryName;
+    }
+
+    public String getComputerExplain() {
+        return computerExplain;
+    }
+
+    public void setComputerExplain(String computerExplain) {
+        this.computerExplain = computerExplain;
+    }
 
     public String getCharacterOne() {
         return characterOne;
@@ -65,11 +116,11 @@ public class computer {
     }
 
     public String getExplain() {
-        return explain;
+        return computerExplain;
     }
 
     public void setExplain(String explain) {
-        this.explain = explain;
+        this.computerExplain = explain;
     }
 
 
